@@ -1,0 +1,17 @@
+// Frameworks
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap');
+@import './frameworks/materialize';
+@import './frameworks/materialdesignicons';
+@import './frameworks/swiper_bundle';
+
+// Parts
+@import './parts/vars';
+@import './parts/media';
+@import './parts/custom_grid';
+@import './parts/helpers';
+@import './parts/typography';
+@import './parts/header';
+@import './parts/footer';
+
+// Pages
+@import './pages/main';

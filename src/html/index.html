@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    @@include('./parts/head.html', {title: "Главная"})
+</head>
+<body>
+    @@include('./parts/header.html')
+    <main id="main">
+        <section id="hero">
+            <div class="swiper" id="main-hero">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide lazy" data-src="/img/hero/main-hero-1.jpg">
+                        <div class="container">
+                            <div class="slider-header align-center-m-down">
+                                Танки грязи не боятся.
+                                <div class="descriptor">
+                                    Когда проходят качественное тех. обслуживание
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide lazy" data-src="/img//hero/main-hero-2.jpg">
+                        <div class="container">
+                            <div class="slider-header align-center-m-down">Ремонт полного цикла с доставкой на дом</div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide lazy" data-src="/img//hero/main-hero-3.jpg">
+                        <div class="container">
+                            <div class="slider-header align-center-m-down">Скоро сезон – пора пройти сервисное обслуживание</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </section>
+        <section id="repair">
+            <div class="container">
+                <div class="row">
+                    <div class="col s12 center-align">
+                        <h1>Ремонт и обслуживание мототехники</h1>
+                    </div>
+                    <div class="col xl8 offset-xl2 l12">
+                        <div class="row flex">
+                            <div class="col xl4 l6 m12 s12">
+                                <div class="point">
+                                    <h2 class="digit">
+                                        <span>600</span>
+                                        <span class="explanation">рублей</span>
+                                    </h2>
+                                    <div class="description">
+                                        Столько стоит забрать вашу технику на ремонт 
+                                        и привезти обратно по Краснодару
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col xl4 l6 m12 s12">
+                                <div class="point">
+                                    <h2 class="digit">
+                                        <span>6</span>
+                                        <span class="explanation">боксов</span>
+                                    </h2>
+                                    <div class="description">
+                                        Для бережного хранения и качественного 
+                                        сервисного обслуживания  вашей техники
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col xl4 l6 m12 s12">
+                                <div class="point">
+                                    <h2 class="digit">
+                                        <span>6</span>
+                                        <span class="explanation">принципов работы</span>
+                                    </h2>
+                                    <div class="description">
+                                        Качество, комфорт, надёжность, удобство, 
+                                        клиентоориентированность, результат
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col xl6 offset-xl3 l8 offset-l2 m12 s12 center-align">
+                        <p>
+                            Мы фанаты квадро и мототехники У каждого из нас в гараже стоит любимый «мотозверь», 
+                            поэтому мы, как никто, знаем как много значит качественный сервис. Именно поэтому 
+                            мы открыли свой. От фанатов и для фанатов. Чтобы в нём было всё, чего так не хватало у других:
+                        </p>
+                    </div>
+                </div>
+                <div class="row flex vertical-center">
+                    <div class="col xl3 offset-xl1 l4 m5 s12">
+                        <div class="lazy service" data-src="/img/service.png"></div>
+                    </div>
+                    <div class="col xl7 l8 m12 s12">
+                        <ul class="browser-default">
+                            <li>Предварительная консультация в whatsapp или по телефону, чтобы сложилась ясная картина, что может потребоваться и сколько это может стоить</li>
+                            <li>Доставка техники за 600 рублей. В эту сумму мы включили не только забор техники, но и возврат её вам. Для трансфера у нас имеется всё необходимое оборудование и чехлы для бережной перевозки.</li>
+                            <li>Ваше удобство – наш приоритет. Мы приедем к вам не когда удобно нам, а когда будет удобно вам.</li>
+                            <li>Если заказываете доставку, то мы пришлём к вам не менеджера, а специалиста, способного провести грамотную консультацию и согласовать необходимый перечень работ.</li>
+                            <li>Каждый этап ремонта согласовывается. Мы хотим, чтобы вы ясно понимали, что мы делаем, зачем мы это делаем и почему это важно для вашей техники</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="price">
+            <div class="container">
+                <div class="row">
+                    <div class="col s12 center-align">
+                        <h2>Прайс-лист</h2>
+                    </div>
+                    <div class="col m6 s12">
+                        <h3>Квадроциклы</h3>
+                        @@loop('./parts/price_section.html', './data/price_quadro.json')
+                    </div>
+                    <div class="col m6 s12">
+                        <h3>Мотоциклы</h3>
+                        @@loop('./parts/price_section.html', './data/price_bike.json')
+                    </div>
+                    <div class="col s12">
+                        <div class="price-descriptor">
+                            <ul>
+                                <li>Обращаем ВАШЕ внимание, что расходные материалы и запчасти в стоимость работ не включены!!!</li>
+                                <li>
+                                    Не является публичной офертой! Цены могут быть изменены в зависимости от марки и модели 
+                                    мототехники, сложности выполнения работ и повышающих коэффициентов.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="gallery">
+            <div class="container">
+                <div class="row">
+                    <div class="col s12 center-align">
+                        <h2>Галерея</h2>
+                    </div>
+                </div>
+                <div class="row my-gallery">
+                    @@loop('./parts/gallery-image.html', './data/gallery.json')
+                </div>
+                <div class="row">
+                    <div class="col s12 center-align">
+                        <a href="" class="btn">Смотреть все</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contacts">
+            <div id="map"></div>
+            <div class="contacts-block">
+                <div class="header align-center-m-down">
+                    <h2>Контакты</h2>
+                    <div class="flex">
+                        <div class="address">
+                            385141, Россия,  Республика Адыгея, 
+                            пос. Яблоновский, улица Луговая, 36
+                        </div>
+                        <div class="action">
+                            <a target="_blank" rel="nofollow" href="https://www.google.com/maps/dir//Квадро Мото Центр DIMALEX/@44.9803207,38.8611791,12z" class="btn">Проложить маршрут</a>
+                        </div>
+                    </div>
+                    <div class="contacts-footer">
+                        <span>Часы работы</span>
+                        <p>10:00 – 19:00</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    @@include('./parts/footer.html')
+    @@include('./parts/photoswipe.html')
+    @@include('./parts/scripts.html')
+</body>
+</html>

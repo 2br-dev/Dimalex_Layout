@@ -1,0 +1,25 @@
+body{
+    
+    @media(min-width: $large){
+        padding-top: 80px;
+    }
+    
+    background: $paper;
+
+    & section:not(#hero){
+        padding: 6vmin 0;
+    }
+
+    & .btn{
+        display: inline-block;
+        padding: 0 20px;
+        line-height: 40px;
+        background: $accent;
+        color: #fff;
+        transition: background-color .2s;
+
+        &:hover{
+            background-color: lighten($accent, 10);
+        }
+    }
+}

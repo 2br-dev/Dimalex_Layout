@@ -1,0 +1,34 @@
+[
+    {
+        "header": "Диагностика",
+        "price": "./data/quadro/diag.json"
+    },
+    {
+        "header": "Ходовая часть",
+        "price": "./data/quadro/hodovaya.json"
+    },
+    {
+        "header": "Шиномонтаж",
+        "price": "./data/quadro/shinomontag.json"
+    },
+    {
+        "header": "Двигатель",
+        "price": "./data/quadro/engine.json"
+    },
+    {
+        "header": "Техническое обслуживание",
+        "price": "./data/quadro/service.json"
+    },
+    {
+        "header": "Установка доп. оборудования",
+        "price": "./data/quadro/equipment.json"
+    },
+    {
+        "header": "Электрика",
+        "price": "./data/quadro/electrics.json"
+    },
+    {
+        "header": "Эвакуация",
+        "price": "./data/quadro/evacuation.json"
+    }
+]

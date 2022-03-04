@@ -1,0 +1,25 @@
+{
+  "name": "dimalex",
+  "version": "1.0.0",
+  "description": "Dimalex website layout",
+  "main": "Alexey Kotyshkov",
+  "license": "MIT",
+  "scripts": {
+    "start": "clear; gulp watch"
+  },
+  "dependencies": {
+    "@babel/core": "^7.17.5",
+    "@babel/preset-env": "^7.16.11",
+    "babel-preset-env": "^1.7.0",
+    "babelify": "^10.0.0",
+    "browser-sync": "^2.27.7",
+    "browserify": "^17.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-file-include": "^2.3.0",
+    "gulp-notify": "^4.0.0",
+    "gulp-sass": "^5.1.0",
+    "node-sass": "^7.0.1",
+    "vinyl-source-stream": "^2.0.0"
+  }
+}

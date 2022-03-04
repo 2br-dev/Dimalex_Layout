@@ -1,0 +1,42 @@
+[
+    {
+        "header": "Диагностика",
+        "price": "./data/bike/diagnostics.json"
+    },
+    {
+        "header": "Ходовая часть",
+        "price": "./data/bike/hodovaya.json"
+    },
+    {
+        "header": "Шиномонтаж",
+        "price": "./data/bike/shinomontag.json"
+    },
+    {
+        "header": "Двигатель",
+        "price": "./data/bike/engine.json"
+    },
+    {
+        "header": "Техническое обслуживание",
+        "price": "./data/bike/service.json"
+    },
+    {
+        "header": "Установка доп. оборудования",
+        "price": "./data/bike/equipment.json"
+    },
+    {
+        "header": "Слесарные работы",
+        "price": "./data/bike/slesar.json"
+    },
+    {
+        "header": "Установка-снятие деталей",
+        "price": "./data/bike/setup-details.json"
+    },
+    {
+        "header": "Регулировки",
+        "price": "./data/bike/tuning.json"
+    },
+    {
+        "header": "Эвакуация",
+        "price": "./data/bike/evacuation.json"
+    }
+]
