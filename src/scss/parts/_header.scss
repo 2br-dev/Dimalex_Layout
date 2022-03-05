@@ -49,13 +49,22 @@ header{
 
             & li{
 
+                
+                @media(min-width: $large){
+                    margin-left: 20px;
+                }
+
                 & a{
                     display: inline-block;
                     font-size: 28px;
                     line-height: 2em;
-                    width: 56px;
+                    min-width: 56px;
                     text-align: center;
                     color: #fff;
+
+                    & span{
+                        font-size: 22px;
+                    }
                 }
             }
         }

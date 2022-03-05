@@ -22,7 +22,7 @@ $(() => {
 function initEvents(){
     heroSlider.on('slideChange', () => { $('.lazy').lazy(); });
     $('.price-header').on('click', accordionPriceBlock);
-    $(window).on('scroll', updateNavbar);
+    updateNavbar();
 }
 
 function accordionPriceBlock(){
@@ -57,6 +57,8 @@ function updateNavbar(){
             isUpdating = false
         }, 400);
     }
+
+    requestAnimationFrame(updateNavbar);
 
 }
 

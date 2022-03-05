@@ -23,7 +23,7 @@ function initEvents() {
     $('.lazy').lazy();
   });
   $('.price-header').on('click', accordionPriceBlock);
-  $(window).on('scroll', updateNavbar);
+  updateNavbar();
 }
 
 function accordionPriceBlock() {
@@ -54,6 +54,8 @@ function updateNavbar() {
       isUpdating = false;
     }, 400);
   }
+
+  requestAnimationFrame(updateNavbar);
 }
 
 var initPhotoSwipeFromDOM = function initPhotoSwipeFromDOM(gallerySelector) {

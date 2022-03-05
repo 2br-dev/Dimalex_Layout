@@ -260,6 +260,12 @@ main#main{
 
         &#gallery{
 
+            & .my-gallery{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
             & figure{
                 margin: 0;
             }
@@ -335,8 +341,11 @@ main#main{
                 z-index: 20;
                 background: $paper;
 
-                @media(max-width: $medium){
+                @media(max-width: $extra-large){
                     position: relative;
+                    width: 50%;
+                    min-width: 320px;
+                    max-width: 100%;
                     padding: 40px 0;
                     bottom: unset;
                 }
@@ -352,7 +361,7 @@ main#main{
                         width: 50%;
                     }
 
-                    @media(max-width: $medium){
+                    @media(max-width: $extra-large){
                         flex-direction: column;
 
                         & .address, & .action{
@@ -362,6 +371,7 @@ main#main{
 
                     & .action{
                         text-align: center;
+                        padding: 20px 0;
                     }
                 }
 
