@@ -13,7 +13,12 @@ $(() => {
             el: '.swiper-pagination',
             type: 'bullets',
             clickable: true
-        }
+        },
+        autoplay: {
+            delay: 4000
+        },
+        speed: 800,
+        loop: true
     });
     initEvents();
     
