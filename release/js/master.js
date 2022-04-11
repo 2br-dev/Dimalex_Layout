@@ -307,7 +307,7 @@ function initMap() {
   }
 
   if (!paramsObj) {
-    coords = [38.9335, 44.977];
+    coords = [38.931331, 44.980265];
   } else {
     coords = [parseFloat(paramsObj.lan), parseFloat(paramsObj.lat)];
   }
