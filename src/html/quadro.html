@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	@@include('./parts/head.html', {title: 'Ремонт квадроциклов'})
+</head>
+<body>
+	@@include('./parts/header.html', {active: 'quadro'})
+
+	<main id="quadro">
+		<section id="top">
+			<div class="container">
+				<div class="row flex">
+					<div class="col xl5 l6 m12 offset-xl1 quad-text order-m2">
+						<h1>Ремонт квадро&shy;циклов</h1>
+						<p>
+							Качественный ремонт и сервисное обслуживание квадроцикла – залог того, что техника прослужит долгие годы и даже самые серьезные поломки во время покатушек не станут фатальными. Именно поэтому мы открыли в Краснодаре сервисный центр полного цикла для ремонта и обслуживания квадроциклов.
+						</p>
+						<p>
+							В Квадро-мотосервисе Dimalex вы можете не только отремонтировать свой квадроцикл, чтобы с ним не случилось, но и пройти качественное сервисное обслуживание, провести полную диагностику транспорта, а также модернизировать ваш квадроцикл. Высокое качество услуг – наша приоритетная задача, поэтому наш сервис оснащён по последнему слову техники, в ремонтных боксах всегда светло, тепло и есть всё необходимое для качественного ремонта вашего квадроцикла.
+						</p>
+						<p>
+							Отвоз и доставка вашего квадроцикла по Краснодару за 600 рублей также важная часть услуг нашего сервисного центра. Не всегда удобно везти технику самостоятельно, поэтому мы предусмотрели всё для оперативной и безопасной транспортировки вашего квадроцикла
+						</p>
+					</div>
+					<div class="col xl5 l6 m12 offset-xl1">
+						<div class="lazy h" data-src="/img/quadro/main.jpg"></div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<div class="section-separator"></div>
+		<section id="benefits">
+			<div class="container">
+				<div class="row">
+					<div class="col s12 center-align">
+						<h2>Наши плюсы</h2>
+					</div>
+				</div>
+				<div class="row flex">
+					<div class="col l3 m6 s12">
+						<div class="lazy h" data-src="/img/quadro/prepare.jpg"></div>
+						<h3>Подготовка к заездам</h3>
+						<p>
+							Сервисное обслуживание и подготовка квадроцикла к заезду играет решающее значение для комфортных покатушек. Важно быть уверенным, что квадроцикл не подведёт в самый неподходящий момент. У нас вы можете в этом не сомневаться
+						</p>
+					</div>
+					<div class="col l3 m6 s12">
+						<div class="lazy h" data-src="/img/quadro/transfer.jpg"></div>
+						<h3>Трансфер</h3>
+						<p>
+							Как владельцы квадроциклов с большим стажем, мы знаем как сложно отвезти его в сервис и обратно. Поэтому предусмотрели доставку. 600 рублей в обе стороны по всему Краснодару
+						</p>
+					</div>
+					<div class="col l3 m6 s12">
+						<div class="lazy h" data-src="/img/quadro/details.jpg"></div>
+						<h3>Качественные запчасти</h3>
+						<p>
+							От качества комплектующих напрямую зависит качество ремонта, поэтому в нашем сервисе используются либо полностью оригинальные комплектующие, либо сертифицированные производителем
+						</p>
+					</div>
+					<div class="col l3 m6 s12">
+						<div class="lazy h" data-src="/img/quadro/hangar.jpg"></div>
+						<h3>Помещение для ремонта</h3>
+						<p>
+							Должно быть комфортным и оборудованным всем необходимым. Это влияет не только на условия работы специалистов, но и на качество их работы. Когда всё под рукой и ничего не раздражает, можно сосредоточиться на самом главном – ремонте.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="services">
+			<div class="container">
+				<div class="row">
+					<div class="col s12 center-align">
+						<h2>Наши услуги</h2>
+					</div>
+					<div class="col l6 m12">
+						<div class="price-wrapper">
+							@@loop('./parts/price_section_intro.html', './data/price_quadro_left.json')
+						</div>
+					</div>
+					<div class="col l6 m12">
+						<div class="price-wrapper">
+							@@loop('./parts/price_section_intro.html', './data/price_quadro_right.json')
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		@@include('./parts/contacts.html')
+	</main>
+
+	@@include('./parts/footer.html')
+	@@include('./parts/scripts.html')
+</body>
+</html>

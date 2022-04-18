@@ -27,8 +27,21 @@ function initEvents() {
   heroSlider.on('slideChange', function () {
     $('.lazy').lazy();
   });
+  $('body').on('click', '#burger', toggleMenu);
+  $('body').on('click', closeBurger);
   $('.price-header').on('click', accordionPriceBlock);
   updateNavbar();
+}
+
+function closeBurger() {
+  var elArray = composedPath(this);
+  $('.mobile-wrapper').removeClass('active');
+}
+
+function toggleMenu(e) {
+  e.preventDefault();
+  $('.mobile-wrapper').toggleClass('active');
+  e.stopImmediatePropagation();
 }
 
 function accordionPriceBlock() {
@@ -360,7 +373,7 @@ function initMap() {
     });
 
     if (f && f.get('type') == 'icon') {
-      var linkEl = $('<a href="https://goo.gl/maps/8XZasHN3xJN8c4357" target="_blank">Google</a>');
+      var linkEl = $('<a href="https://goo.gl/maps/ginpBuogo7nZaVxH6" target="_blank">Google</a>');
       $('#map').append(linkEl);
       linkEl[0].click();
       $(linkEl).remove();
@@ -377,6 +390,22 @@ function initMap() {
       this.getTargetElement().style.cursor = '';
     }
   });
+}
+
+function composedPath(el) {
+  var path = [];
+
+  while (el) {
+    path.push(el);
+
+    if (el.tagName === 'HTML') {
+      path.push(document);
+      path.push(window);
+      return path;
+    }
+
+    el = el.parentElement;
+  }
 }
 
 },{}]},{},[1]);

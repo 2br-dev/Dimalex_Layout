@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	@@include('./parts/head.html', {title: 'Ремонт мотоциклов'})
+</head>
+<body>
+	@@include('./parts/header.html', {active: 'moto'})
+
+	<main id="quadro">
+		<section id="top">
+			<div class="container">
+				<div class="row flex vcenter">
+					<div class="col xl5 l6 m12 offset-xl1 quad-text order-m2">
+						<h1>Ремонт мото&shy;циклов</h1>
+						<p>
+							Внимательное отношение к своему мотоциклу – важная черта любого мотофаната. Мы знаем об этом не понаслышке, поэтому создавая сервис по ремонту мотоциклов в Краснодаре сделали эту черту нашим главным принципом, определяющим наш подход к ремонту и обслуживанию мотоциклов.
+						</p>
+						<p>
+							Dimalex – сервисный сервис полного цикла. Это означает, что весь спектр работ по обслуживанию вашего мотоцикла мы берём на себя:
+						</p>
+						<ol class="browser-default">
+							<li>Произведём транспортировку мотоцикла в сервис и обратно за 600 рублей по Краснодару</li>
+							<li>Проведём сервисное обслуживание и подготовку вашего мотоцикла к сезону </li>
+							<li>Консервация и хранение мотоцикла в межсезонье – залог долгой службы вашего транспорта.</li>
+						</ol>
+						<p>
+							Высокое качество услуг – наша приоритетная задача, поэтому на все выполненные работы мы предоставляем гарантию. Используем в ремонте только проверенные комплектующие, а сам процесс ремонта фиксируем на камеру, чтобы вы могли убедиться лично в том, как мы работаем.
+						</p>
+					</div>
+					<div class="col xl5 l6 m12 offset-xl1">
+						<div class="lazy h" data-src="/img/moto/main.jpg"></div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<div class="section-separator"></div>
+		<section id="benefits">
+			<div class="container">
+				<div class="row">
+					<div class="col s12 center-align">
+						<h2>Наши плюсы</h2>
+					</div>
+				</div>
+				<div class="row flex">
+					<div class="col l3 m6 s12">
+						<div class="lazy h" data-src="/img/moto/skills.jpg"></div>
+						<h3>Профессионализм</h3>
+						<p>
+							У каждого из специалистов нашего сервисного центра большой практический опыт решения даже самых нестандартных задач, что позволяет решать любые проблемы качественно и в срок.
+						</p>
+					</div>
+					<div class="col l3 m6 s12">
+						<div class="lazy h" data-src="/img/moto/quarantee.jpg"></div>
+						<h3>Гарантия качества</h3>
+						<p>
+							Мы уверены в профессионализме наших специалистов, поэтому предоставляем гарантию на выполненные работы по ремонту мотоциклов. Качество нашей работы ещё никогда не вызывало нареканий: мы гарантируем, что так и будет в дальнейшем.
+						</p>
+					</div>
+					<div class="col l3 m6 s12">
+						<div class="lazy h" data-src="/img/moto/everything.jpg"></div>
+						<h3>Оснащены всем необходимым</h3>
+						<p>
+							Качественные комплектующие, опытные специалисты, удобные для работы боксы и инструментарий для комплексного ремонта есть в нашем сервисе. Проведём ремонт любой сложности, потому что всё необходимое для этого есть в нашем сервисе.
+						</p>
+					</div>
+					<div class="col l3 m6 s12">
+						<div class="lazy h" data-src="/img/moto/transfer.jpg"></div>
+						<h3>Трансфер</h3>
+						<p>
+							Не всегда есть возможность и время для транспортировки мотоцикла в сервис. Поэтому мы предусмотрели доставку. У нас есть всё для безопасной транспортировки техники в сервис. Стоимость трансфера – 600 рублей по Краснодару в обе стороны.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="services">
+			<div class="container">
+				<div class="row">
+					<div class="col s12 center-align">
+						<h2>Наши услуги</h2>
+					</div>
+					<div class="col l6 m12">
+						<div class="price-wrapper">
+							@@loop('./parts/price_section_intro.html', './data/price_moto_left.json')
+						</div>
+					</div>
+					<div class="col l6 m12">
+						<div class="price-wrapper">
+							@@loop('./parts/price_section_intro.html', './data/price_moto_right.json')
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		@@include('./parts/contacts.html')
+	</main>
+
+	@@include('./parts/footer.html')
+	@@include('./parts/scripts.html')
+</body>
+</html>

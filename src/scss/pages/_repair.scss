@@ -1,0 +1,31 @@
+main{
+
+	&#quadro, &#moto{
+
+		& section{
+
+			&#top{
+				margin: 3vw 0;
+
+				& .quad-text{
+
+					position: relative;
+					z-index: 1;
+
+					&:before{
+
+						content: '';
+						display: block;
+						width: 20vw;
+						height: 12vw;
+						position: absolute;
+						border: 2px solid #222;
+						left: -5vw;
+						top: -40px;
+						z-index: -1;
+					}
+				}
+			}
+		}
+	}
+}

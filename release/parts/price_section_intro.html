@@ -1,0 +1,22 @@
+<div class="price-section">
+    <div class="price-header">
+        <div class="title">@@header</div>
+        <div class="action">
+            <div class="mdi mdi-chevron-right"></div>
+        </div>
+    </div>
+    <div class="price-wrapper">
+		<div class="price-intro">
+            <p>
+                @@intro
+            </p>
+		</div>
+        <div class="price-table">
+            <div class="price-header-row">
+                <div class="name">Услуга</div>
+                <div class="price">Цена</div>
+            </div>
+            @@loop('./price_row.html', "@@price")
+        </div>
+    </div>
+</div>

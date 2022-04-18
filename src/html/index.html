@@ -4,7 +4,7 @@
     @@include('./parts/head.html', {title: "Главная"})
 </head>
 <body>
-    @@include('./parts/header.html')
+    @@include('./parts/header.html', {active: 'main'})
     <main id="main">
         <section id="hero">
             <div class="swiper" id="main-hero">
@@ -21,12 +21,22 @@
                     </div>
                     <div class="swiper-slide lazy" data-src="/img//hero/main-hero-2.jpg">
                         <div class="container">
-                            <div class="slider-header align-center-m-down">Ремонт полного цикла с доставкой на дом</div>
+                            <div class="slider-header align-center-m-down">
+                                Ремонт полного цикла 
+                                <div class="descriptor">
+                                    с доставкой на дом
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="swiper-slide lazy" data-src="/img//hero/main-hero-3.jpg">
                         <div class="container">
-                            <div class="slider-header align-center-m-down">Скоро сезон – пора пройти сервисное обслуживание</div>
+                            <div class="slider-header align-center-m-down">
+                                Скоро сезон!
+                                <div class="descriptor">
+                                    Пора пройти сервисное обслу&shy;живание!
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -37,7 +47,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col s12 center-align">
-                        <h1>Ремонт и обслуживание мототехники</h1>
+                        <h1>Ремонт и обслу&shy;живание мото&shy;техники</h1>
                     </div>
                     <div class="col xl8 offset-xl2 l12">
                         <div class="row flex">
@@ -150,27 +160,7 @@
                 </div>
             </div>
         </section>
-        <section id="contacts">
-            <div id="map"></div>
-            <div class="contacts-block">
-                <div class="header align-center-xl-down">
-                    <h2>Контакты</h2>
-                    <div class="flex">
-                        <div class="address">
-                            385141, Россия,  Республика Адыгея, 
-                            пос. Яблоновский, улица Луговая, 63/1
-                        </div>
-                        <div class="action">
-                            <a target="_blank" rel="nofollow" href="https://www.google.com/maps/dir//Квадро Мото Центр DIMALEX/@44.9803207,38.8611791,12z" class="btn">Проложить маршрут</a>
-                        </div>
-                    </div>
-                    <div class="contacts-footer">
-                        <span>Часы работы</span>
-                        <p>10:00 – 19:00</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+        @@include('./parts/contacts.html')
     </main>
     @@include('./parts/footer.html')
     @@include('./parts/photoswipe.html')

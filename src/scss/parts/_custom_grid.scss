@@ -193,6 +193,14 @@
 	.align-#{$direction}-#{$class}{@media(min-width: $min){text-align: #{$direction};}}
 }
 
+@mixin order($class, $media, $orderNum){
+	@media(max-width: $media){
+		.order-#{$class}#{$orderNum}{
+			order: $orderNum;
+		}
+	}
+}
+
 // Hide
 @include hide(s, $small, $medium);
 @include hide(m, $medium, $large);
@@ -216,3 +224,17 @@
 @include alignFrom(left, h, $huge);
 @include alignFrom(center, h, $huge);
 @include alignFrom(right, h, $huge);
+
+// Order
+$medias: ( $extra-small, $small, $medium, $large, $extra-large );
+$classes: ( 'xs', 's', 'm', 'l', 'xl' );
+
+@for $z from 1 to length($medias){
+	
+	@for $x from 1 to length($medias){
+
+		@for $i from 1 to 13{
+			@include order(nth($classes, $x), nth($medias, $z), $i);
+		}
+	}
+}

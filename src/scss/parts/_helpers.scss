@@ -22,4 +22,240 @@ body{
             background-color: lighten($accent, 10);
         }
     }
+
+    & .lazy{
+
+        background-size: cover;
+
+        &.h{
+
+            padding-bottom: 65%;
+        }
+
+        &.v{
+
+            padding-bottom: 120%;
+        }
+
+        &.q{
+
+            padding-bottom: 100%;
+        }
+    }
+
+    & .price-section{
+
+        margin-bottom: 12px;
+
+        & .price-header{
+
+            background: lighten($paper, 2);
+            line-height: 46px;
+            padding: 0 10px;
+            cursor: pointer;
+            transition: background-color .2s;
+            display: flex;
+
+            & .title{
+                flex-grow: 1;
+            }
+
+            & .action{
+                width: 46px;
+                text-align: center;
+                font-size: 18px;
+                transform: rotate(90deg);
+                transition: transform .2s;
+            }
+            
+            &:hover{
+                background: lighten($paper, 4);
+            }
+
+            &.active{
+
+                & .action{
+                    transform: rotate(270deg);
+                }
+
+                &  ~ .price-wrapper{
+                    display: block;
+                }
+            }
+        }
+
+        & .price-wrapper{
+
+            display: none;
+
+            & .price-intro p{
+                margin: 20px;
+            }
+
+            & .price-table{
+
+                padding: 20px;
+                display: table;
+                width: 100%;
+
+                & .price-header-row{
+                    display: table-header-group;
+
+                    & .name, & .price{
+                        position: sticky;
+                        top: 56px;
+                        display: table-cell;
+                        background: $paper;
+                        border-bottom: 1px solid #fff;
+                        z-index: 2;
+                        padding: 0 6px;
+                    }
+                }
+
+                & .price-row{
+
+                    display: table-row;
+                    position: relative;
+
+                    & .name, & .price{
+                        display: table-cell;
+                        padding: 6px 6px;
+                    }
+
+                    & .price{
+                        white-space: nowrap;
+                    }
+
+                    &:hover{
+
+                        & .name, & .price{
+                            box-shadow: 0 0 0 50px rgba(black, .7) inset;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    & .section-separator{
+        width: 80vmin;
+        border-bottom: 1px solid #333;
+        margin: auto;
+        margin-bottom: 2vw;
+    }
+
+    & #contacts{
+
+        padding: 0;
+        position: relative;
+
+        & #map{
+
+            height: 60vh;
+            position: relative;
+
+            & .ol-rotate, & .ol-attribution{
+                display: none;
+            }
+
+            & .ol-zoom{
+                position: absolute;
+                display: block;
+                width: 40px;
+                right: 20px;
+                top: 20px;
+                display: flex;
+                flex-direction: column;
+                border-radius: 8px;
+                overflow: hidden;
+                
+                & button{
+                    background: $paper;
+                    border: 0;
+                    height: 40px;
+                    padding: 0;
+                    width: 40px;
+                    font-size: 22px;
+                    color: #fff;
+                    transition: background-color .2s;
+                    cursor: pointer;
+                    text-align: center;
+
+                    &:first-of-type{
+                        border-bottom: 1px solid lighten($paper, 20);
+                    }
+
+                    &:hover{
+                        background-color: lighten($paper, 20);
+                    }
+                }
+            }
+        }
+
+        & .contacts-block{
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 0 20px;
+            bottom: 20px;
+            z-index: 20;
+            background: $paper;
+
+            @media(max-width: $extra-large){
+                position: relative;
+                width: 50%;
+                min-width: 320px;
+                max-width: 100%;
+                padding: 40px 0;
+                bottom: unset;
+            }
+
+            & .flex{
+
+                display: flex;
+                border-bottom: 1px solid #333;
+                padding-bottom: 20px;
+                margin-bottom: 20px;
+
+                & .address, & .action{
+                    width: 50%;
+                }
+
+                @media(max-width: $extra-large){
+                    flex-direction: column;
+
+                    & .address, & .action{
+                        width: 100%;
+                    }
+                }
+
+                & .action{
+                    text-align: center;
+                    padding: 20px 0;
+                }
+            }
+
+            & .contacts-footer{
+                text-align: center;
+                padding-bottom: 20px;
+
+                & span{
+                    line-height: 1em;
+                    display: inline-block;
+                }
+
+                & p{
+                    font-size: 22px;
+                    font-weight: 500;
+                    line-height: 1em;
+                    margin: 0;
+                }
+            }
+
+            @media(max-width: $medium){
+                width: 100%;
+                min-width: unset;
+            }
+        }
+    }
 }
